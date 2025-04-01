@@ -8,6 +8,7 @@ import Navbar from '../shared/navbar';
 import ApplicantsTabel from './ApplicantsTabel';
 
 
+
 const Applicants = () => {
 
   const params=useParams()
