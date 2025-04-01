@@ -6,7 +6,7 @@ import CategoryCarousel from './CategoryCarousel'
 import Footer from './Footer'
 import HeroSection from './HeroSection'
 import LatestJobs from './LatestJobs'
-import Navbar from './shared/navbar'
+import Navbar from './shared/Navbar'
 
 const Home= () => {
   useGetAllJobs()

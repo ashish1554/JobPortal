@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { setSingleCompany } from '../../redux/companySlice'
 import { COMPANY_API_END_POINT } from '../../utils/constant'
-import Navbar from '../shared/navbar'
 
 const CompanyCreate = () => {
 

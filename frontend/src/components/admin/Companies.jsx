@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import useGetAllCompanies from '../../hooks/useGetAllCompanies'
 import { setSearchCompanyByText } from '../../redux/companySlice'
-import Navbar from '../shared/navbar'
+import Navbar from '../shared/Navbar'
 import CompaniesTabel from './CompaniesTabel'
 
 const Companies = () => {

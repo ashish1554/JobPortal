@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { setAllApplicants } from '../../redux/applicationSlice';
 import { APPLICATION_API_END_POINT } from '../../utils/constant';
-import Navbar from '../shared/navbar';
+import Navbar from '../shared/Navbar';
 import ApplicantsTabel from './ApplicantsTabel';
 
 

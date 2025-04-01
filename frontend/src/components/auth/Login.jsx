@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { setLoading, setUser } from '../../redux/authSlice'
 import { USER_API_END_POINT } from '../../utils/constant'
-import Navbar from '../shared/navbar'
+import Navbar from '../shared/Navbar'
 
 
 const Login = () => {

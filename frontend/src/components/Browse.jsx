@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import useGetAllJobs from '../hooks/useGetAllJobs'
 import { setSearchedQuery } from '../redux/jobSlice'
 import Job from './Job'
-import Navbar from './shared/navbar'
+import Navbar from './shared/Navbar'
 
 const randomJobs = [1,2,3]
 const Browse = () => {

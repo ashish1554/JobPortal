@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { JOB_API_END_POINT } from "../../utils/constant";
-import Navbar from "../shared/navbar";
+import Navbar from "../shared/Navbar";
 
 const companyArray=[];
 const PostJobs = () => {

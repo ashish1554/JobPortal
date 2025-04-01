@@ -96,7 +96,7 @@ import { useSelector } from "react-redux";
 import { assets } from "../assets/assets.js";
 import useGetAppliedJobs from "../hooks/useGetAppliedJob.jsx";
 import AppliedJobTable from "./AppliedJobTable.jsx";
-import Navbar from "./shared/navbar.jsx";
+import Navbar from "./shared/Navbar.jsx";
 import UpdateProfileDialoag from "./UpdateProfileDialoag.jsx";
 
 const isResume = true;

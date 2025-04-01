@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import useGetAllAdminJobs from '../../hooks/useGetAllAdminJobs'
 import { setSearchJobByText } from '../../redux/jobSlice'
-import Navbar from '../shared/navbar'
+import Navbar from '../shared/Navbar'
 import AdminJobsTabel from './AdminJobsTabel'
 
 
