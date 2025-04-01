@@ -34,9 +34,12 @@ app.use('/api/users',userRoute)
 app.use('/api/company',companyRoute)
 app.use('/api/job',jobRoute)
 app.use('/api/application',applicationRoute)
-// app.get('/api',(req,res)=>{
-//     res.json({message:'API is running'})
-// })
+app.get('/api',(req,res)=>{
+    res.json({message:'API is running'})
+})
+app.get("/", (req, res) => {
+    res.send("API is running...");
+});
 
 const port=process.env.PORT || 5000;
 app.listen(port,()=>{
