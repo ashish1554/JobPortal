@@ -27,7 +27,7 @@ app.use(cookieParser())
 // }
 
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://jp-frontend-cx49.onrender.com'], 
+    origin: ['http://localhost:5173', 'https://job-portal-hooo.vercel.app/'], 
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
 };
