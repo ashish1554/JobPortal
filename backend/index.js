@@ -33,17 +33,26 @@ app.use(cookieParser())
 // };
 
 // app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: ['http://localhost:5173', 'https://job-portal-hooo.vercel.app'], // ❌ removed trailing slashes
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // ✅ ensure OPTIONS is included
+// };
+
+// app.use(cors(corsOptions));
+
+//   // ✅ Handle preflight requests globally
+
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://job-portal-hooo.vercel.app'], // ❌ removed trailing slashes
+    origin: [
+        'http://localhost:5173',
+        'https://job-portal-hooo.vercel.app',
+        'https://job-portal-hooo-cuwjo4o89-ashish1554s-projects.vercel.app' // ✅ Correct Vercel frontend
+    ],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // ✅ ensure OPTIONS is included
-  };
-  
-  app.use(cors(corsOptions));
-  
-  // ✅ Handle preflight requests globally
-  app.options('*', cors(corsOptions));
-  
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+};
+app.options('*', cors(corsOptions));
 
 
 //api
