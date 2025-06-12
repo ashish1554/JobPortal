@@ -110,16 +110,28 @@ export const login=async(req,res)=>{
         }
 
 
-        return res.status(200).cookie("token",token,
-        {
-        maxAge:1*24*60*60*1000,
-        httpsOnly:true,
-        sameSite:"strict"
-        }).json({
-            success:true,
+        // return res.status(200).cookie("token",token,
+        // {
+        // maxAge:1*24*60*60*1000,
+        // httpsOnly:true,
+        // sameSite:"strict"
+        // }).json({
+        //     success:true,
+        //     user,
+        //     message:`Welcome Back ${user.fullname}`
+        // })
+        return res.status(200).cookie("token", token, {
+            maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production", // true on Render
+            sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax" // allow frontend-backend on different domains
+          }).json({
+            success: true,
             user,
-            message:`Welcome Back ${user.fullname}`
-        })
+            message: `Welcome Back ${user.fullname}`
+          });
+          
+        
     }
     catch(error){
         res.status(500).json({success:false,message:error.message})
