@@ -26,13 +26,24 @@ app.use(cookieParser())
 //     credentials: true,
 // }
 
-const corsOptions = {
-    origin: ['http://localhost:5173', 'https://job-portal-hooo.vercel.app/'], 
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-};
+// const corsOptions = {
+//     origin: ['http://localhost:5173', 'https://job-portal-hooo.vercel.app/'], 
+//     credentials: true,
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+const corsOptions = {
+    origin: ['http://localhost:5173', 'https://job-portal-hooo.vercel.app'], // ❌ removed trailing slashes
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // ✅ ensure OPTIONS is included
+  };
+  
+  app.use(cors(corsOptions));
+  
+  // ✅ Handle preflight requests globally
+  app.options('*', cors(corsOptions));
+  
 
 
 //api
