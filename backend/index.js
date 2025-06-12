@@ -47,7 +47,8 @@ const corsOptions = {
     origin: [
         'http://localhost:5173',
         'https://job-portal-hooo.vercel.app',
-        'https://job-portal-hooo-cuwjo4o89-ashish1554s-projects.vercel.app' // ✅ Correct Vercel frontend
+        'https://job-portal-hooo-cuwjo4o89-ashish1554s-projects.vercel.app',
+         'https://job-portal-hooo-s7su2a06t-ashish1554s-projects.vercel.app' // ✅ Correct Vercel frontend
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
