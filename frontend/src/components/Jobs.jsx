@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import FilterCard from './FilterCard'
 import Job from './Job'
@@ -26,29 +26,6 @@ const Jobs = () => {
             setFilterJobs(allJobs)
         }
     }, [allJobs,searchedQuery])
-
-    // useEffect(() => {
-    //     console.log("🔹 Searched Query from Redux:", searchedQuery);
-    //     console.log("🔹 All Jobs from Redux:", allJobs);
-    
-    //     if (searchedQuery) {
-    //         const filteredJobs = allJobs.filter((job) => {
-    //             console.log("Checking job:", job); // Check each job object
-    //             return (
-    //                 (job.title && job.title.toLowerCase().includes(searchedQuery.toLowerCase())) ||
-    //                 (job.description && job.description.toLowerCase().includes(searchedQuery.toLowerCase())) ||
-    //                 (job.location && job.location.toLowerCase().includes(searchedQuery.toLowerCase()))
-    //             );
-    //         });
-    
-    //         console.log("✅ Filtered Jobs:", filteredJobs);
-    //         setFilterJobs(filteredJobs);
-    //     } else {
-    //         console.log("🔄 Resetting to all jobs.");
-    //         setFilterJobs(allJobs);
-    //     }
-    // }, [allJobs, searchedQuery]);
-    
     
     
 
